@@ -1,0 +1,76 @@
+@use "sass:string";
+
+@mixin responsive-font-size($breakpoints) {
+  @each $breakpoint, $size in $breakpoints {
+    @if $breakpoint == "small" {
+      @media (max-width: 767px) {
+        html {
+          font-size: string.unquote("calc(100vw / #{$size})");
+        }
+      }
+    } @else if $breakpoint == "medium" {
+      @media (min-width: 768px) and (max-width: 1200px) {
+        html {
+          font-size: string.unquote("calc(100vw / #{$size})");
+        }
+      }
+    } @else if $breakpoint == "large" {
+      @media (min-width: 1201px) {
+        html {
+          font-size: string.unquote("calc(100vw / #{$size})");
+        }
+      }
+    }
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (max-width: 400px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $point == extra-large {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+@mixin button-base($background, $hover-background, $hover-color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  background: $background;
+  border-radius: 10rem;
+
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 18rem;
+
+  line-height: 1.05556;
+  text-align: center;
+  color: var(--white);
+
+  padding: 18rem;
+  text-transform: uppercase;
+
+  transition: background 0.3s ease, color 0.3s ease;
+
+  &:hover,
+  &:active {
+    background: $hover-background;
+    color: $hover-color;
+  }
+}

@@ -1,0 +1,308 @@
+@use "../utils/mixins";
+
+.hero {
+  padding-top: 188rem;
+
+  height: 850rem;
+  position: relative;
+  overflow: hidden;
+
+  z-index: 1;
+  background-image: url("../images/main.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 850rem;
+  width: 100%;
+
+  @include mixins.breakpoint(large) {
+    height: 100%;
+    padding-bottom: 120rem;
+  }
+  @include mixins.breakpoint(medium) {
+    padding-top: 100rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40rem;
+
+    @include mixins.breakpoint(medium) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1;
+  }
+
+  &__title {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 69rem;
+
+    line-height: 0.94;
+    text-transform: uppercase;
+    color: var(--white);
+
+    max-width: 840rem;
+
+    margin-bottom: 10rem;
+
+    @include mixins.breakpoint(large) {
+      font-size: 56rem;
+    }
+    @include mixins.breakpoint(medium) {
+      font-size: 29rem;
+    }
+
+    &-center {
+      font-size: 56rem;
+      color: #969af7;
+      text-transform: none;
+      line-height: normal;
+      @include mixins.breakpoint(large) {
+        font-size: 44rem;
+      }
+      @include mixins.breakpoint(medium) {
+        font-size: 23rem;
+      }
+    }
+
+    &-bottom {
+      font-size: 61rem;
+      line-height: 1.228;
+
+      @include mixins.breakpoint(large) {
+        font-size: 50rem;
+      }
+      @include mixins.breakpoint(medium) {
+        font-size: 26rem;
+      }
+    }
+  }
+
+  &__descr {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 23rem;
+
+    line-height: 1.298;
+    color: var(--accent-ligth);
+
+    max-width: 675rem;
+    margin-bottom: 38rem;
+
+    @include mixins.breakpoint(medium) {
+      font-size: 18rem;
+      margin-bottom: 20rem;
+      line-height: normal;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    background: linear-gradient(
+      90deg,
+      rgba(150, 154, 247, 0.3) 0%,
+      rgba(150, 154, 247, 0) 100%
+    );
+
+    border-radius: 10rem;
+    max-width: 835rem;
+    width: 100%;
+
+    padding: 25rem 30rem;
+
+    @include mixins.breakpoint(medium) {
+      padding: 16rem;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 15rem;
+      font-family: var(--second-family);
+
+      font-weight: 400;
+      font-size: 22rem;
+
+      // line-height: 29px;
+      line-height: 1.298;
+
+      color: var(--white);
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 14rem;
+        height: 11rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.161538 6.05C0.0538462 5.94 0 5.775 0 5.665C0 5.555 0.0538462 5.39 0.161538 5.28L0.915385 4.51C1.13077 4.29 1.45385 4.29 1.66923 4.51L1.72308 4.565L4.68462 7.81C4.79231 7.92 4.95385 7.92 5.06154 7.81L12.2769 0.165H12.3308V0.165C12.5462 -0.055 12.8692 -0.055 13.0846 0.165L13.8385 0.935C14.0538 1.155 14.0538 1.485 13.8385 1.705V1.705L5.22308 10.835C5.11538 10.945 5.00769 11 4.84615 11C4.68462 11 4.57692 10.945 4.46923 10.835L0.269231 6.215L0.161538 6.05Z' fill='url(%23paint0_linear_5_4415)' /%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_5_4415' x1='7' y1='0' x2='7' y2='11' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2348FFFF' /%3E%3Cstop offset='0.963205' stop-color='%2325A4F1' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+      }
+
+      @include mixins.breakpoint(medium) {
+        line-height: normal;
+        font-size: 16rem;
+      }
+    }
+  }
+
+  &__rigth {
+    z-index: 1;
+
+    border: 1px solid #f2f3f5;
+    border-radius: 10rem;
+    width: 380rem;
+    flex-shrink: 0;
+    height: auto;
+
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    background: var(--white);
+    overflow: hidden;
+
+    @include mixins.breakpoint(large) {
+      width: 320rem;
+    }
+    @include mixins.breakpoint(medium) {
+      width: 100%;
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28rem;
+      background: linear-gradient(180deg, #6a32b4 0%, #552693 100%);
+      @include mixins.breakpoint(medium) {
+        padding: 20rem;
+      }
+    }
+    &-title {
+      font-family: var(--third-family);
+      font-weight: 700;
+      font-size: 23rem;
+      text-align: center;
+      color: var(--white);
+      text-align: center;
+      max-width: 260rem;
+
+      @include mixins.breakpoint(large) {
+        font-size: 20rem;
+        max-width: 220rem;
+      }
+      @include mixins.breakpoint(medium) {
+        font-size: 16rem;
+        max-width: 180rem;
+      }
+    }
+  }
+
+  &__form {
+    padding: 28rem 40rem;
+
+    @include mixins.breakpoint(large) {
+      padding: 24rem;
+    }
+
+    @include mixins.breakpoint(medium) {
+      padding: 18rem;
+    }
+    &-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+
+      margin-bottom: 34rem;
+      @include mixins.breakpoint(medium) {
+        margin-bottom: 20rem;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    &-label {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 18rem;
+
+      // line-height: 23px;
+      line-height: 1.28906;
+      color: #626366;
+      padding-left: 19rem;
+
+      @include mixins.breakpoint(medium) {
+        padding-left: 10rem;
+        font-size: 16rem;
+      }
+    }
+
+    &-input {
+      font-family: var(--second-family);
+
+      font-weight: 400;
+      font-size: 20rem;
+
+      line-height: 1.28906;
+      color: var(--title);
+
+      box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+      background: #f5f3ff;
+
+      border-radius: 10rem;
+      padding: 15rem;
+
+      @include mixins.breakpoint(medium) {
+        padding: 10rem;
+        font-size: 18rem;
+      }
+
+      &::placeholder {
+        color: #bcbfc4;
+
+        font-weight: 400;
+        font-size: 20rem;
+
+        line-height: 1.28906;
+
+        @include mixins.breakpoint(medium) {
+          font-size: 18rem;
+        }
+      }
+    }
+    &-btn {
+      margin-bottom: 18rem;
+    }
+    &-descr {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+
+      @include mixins.breakpoint(medium) {
+        gap: 6rem;
+      }
+      img {
+        width: 16rem;
+        height: 16rem;
+        flex-shrink: 0;
+      }
+
+      span {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 14rem;
+        color: #c0c0c0;
+      }
+    }
+  }
+}

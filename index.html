@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="/" class="header__logo">
+          <img src="./src/assets/images/logo.svg" alt="Logo" />
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Каталог</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Производители</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Для кого мы работаем</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Сертификаты </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#"> О нас</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#"> FAQ</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#"> Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__tel">
+          <a href="tel:+78123135845">
+            <img src="./src/assets/images/phone.svg" alt="" />
+            <span>+7 (812) 313-58-45</span>
+          </a>
+        </div>
+
+        <button type="button" class="header__burger burger" id="burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="header__menu menu">
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link-close">
+              <img
+                src="./src/assets/images/close.svg"
+                alt="close-btn"
+                class="menu__link-close__img"
+              />
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a href="#" class="menu__link">Каталог</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"> Производители </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"> Для кого мы работаем </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"> Сертификаты </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"> О нас </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"> FAQ </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Контакты </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__left">
+            <h1 class="hero__title">
+              Оптовые поставки
+              <span class="hero__title-center">электронных компонентов</span>
+              <span class="hero__title-bottom">ИЗ КИТАЯ день в день</span>
+            </h1>
+            <p class="hero__descr">
+              Комплексные поставки электронных компонентов и&nbsp;оборудования.
+              Подберем аналоги популярных брендов из&nbsp;Европы в&nbsp;условиях
+              санкций.
+            </p>
+
+            <ul class="hero__list">
+              <li class="hero__list-item">
+                Отсрочка платежей для постоянных клиентов
+              </li>
+              <li class="hero__list-item">
+                Бесплатная доставка по&nbsp;Москве и&nbsp;СПБ в&nbsp;течение
+                2х&nbsp;часов
+              </li>
+              <li class="hero__list-item">
+                Квалифицированный персональный менеджер
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero__rigth">
+            <div class="hero__rigth-top">
+              <h2 class="hero__rigth-title">ЗАКАЖИТЕ ОБРАТНЫЙ ЗВОНОК</h2>
+            </div>
+
+            <form action="" class="hero__form">
+              <div class="hero__form-fields">
+                <div class="hero__form-wrap">
+                  <label for="name" class="hero__form-label">Ваше имя*</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Петров Петр"
+                    class="hero__form-input"
+                  />
+                </div>
+                <div class="hero__form-wrap">
+                  <label for="phone" class="hero__form-label">Ваш номер*</label>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    required
+                    autofocus="off"
+                    placeholder="+7 (_ _ _) _ _ _-_ _-_ _"
+                    class="hero__form-input phonemask"
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="hero__form-btn btn">
+                Заказать звонок
+              </button>
+
+              <div class="hero__form-descr">
+                <img src="./src/assets/images/lock.svg" alt="lock" />
+                <span> Мы гарантируем конфиденциальность данных</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <div class="menu-overlay" id="menu-overlay"></div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/src/js/jquery.inputmask.min.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

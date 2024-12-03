@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "FuturaFuturisC";
+  src: local("FuturaFuturisC"),
+    url("../fonts/FuturaFuturisC.woff2") format("woff2"),
+    url("../fonts/FuturaFuturisC.woff") format("woff"),
+    url("../fonts/FuturaFuturisC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaFuturisC";
+  src: local("FuturaFuturisC Bold"), local("FuturaFuturisC-Bold"),
+    url("../fonts/FuturaFuturisC-Bold.woff2") format("woff2"),
+    url("../fonts/FuturaFuturisC-Bold.woff") format("woff"),
+    url("../fonts/FuturaFuturisC-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaBookC";
+  src: local("FuturaBookC"), url("../fonts/FuturaBookC.woff2") format("woff2"),
+    url("../fonts/FuturaBookC.woff") format("woff"),
+    url("../fonts/FuturaBookC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaDemiC";
+  src: local("FuturaDemiC"), local("FuturaDemiC Regular"),
+    local("FuturaDemiC-Regular"),
+    url("../fonts/FuturaDemiC.woff2") format("woff2"),
+    url("../fonts/FuturaDemiC.woff") format("woff"),
+    url("../fonts/FuturaDemiC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaLightC";
+  src: local("FuturaLightC"), local("FuturaLightC Regular"),
+    local("FuturaLightC-Regular"),
+    url("../fonts/FuturaLightC.woff2") format("woff2"),
+    url("../fonts/FuturaLightC.woff") format("woff"),
+    url("../fonts/FuturaLightC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Regular"), local("ProximaNova Regular"),
+    local("ProximaNova-Regular"),
+    url("../fonts/ProximaNova.woff2") format("woff2"),
+    url("../fonts/ProximaNova.woff") format("woff"),
+    url("../fonts/ProximaNova.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

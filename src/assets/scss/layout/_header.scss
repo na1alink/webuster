@@ -1,0 +1,118 @@
+@use "../utils/mixins";
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 55rem 0;
+  z-index: 4;
+
+  @include mixins.breakpoint(large) {
+    position: fixed;
+    background: var(--accent);
+    padding: 40rem 0;
+  }
+  @include mixins.breakpoint(medium) {
+    padding: 20rem 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20rem;
+    @include mixins.breakpoint(large) {
+      gap: 40rem;
+    }
+    @include mixins.breakpoint(medium) {
+      gap: 20rem;
+    }
+  }
+
+  &__logo {
+    width: 155rem;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include mixins.breakpoint(large) {
+      margin-right: auto;
+    }
+
+    @include mixins.breakpoint(medium) {
+      width: 100rem;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 30rem;
+    }
+
+    &-link {
+      font-family: "FuturaLightC", sans-serif;
+      font-weight: 300;
+      font-size: 18rem;
+
+      line-height: 1.228;
+      color: #fff;
+      color: var(--white);
+      transition: all 0.3s ease;
+      position: relative;
+      white-space: nowrap;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+        outline: none;
+      }
+    }
+
+    @include mixins.breakpoint(large) {
+      display: none;
+    }
+  }
+  &__tel {
+    @include mixins.breakpoint(medium) {
+      display: none;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10rem;
+
+      img {
+        width: 32rem;
+        height: 32rem;
+        flex-shrink: 0;
+      }
+
+      span {
+        font-family: var(-third-family);
+        font-weight: 400;
+        font-size: 18rem;
+
+        line-height: 1.228;
+        text-transform: uppercase;
+        color: var(--white);
+      }
+
+      &:hover,
+      &:focus-visible,
+      &:active {
+        outline: none;
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

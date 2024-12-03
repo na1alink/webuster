@@ -1,0 +1,38 @@
+:root {
+  --container-width: 1920rem;
+  --container-padding: 320rem;
+
+  --font-family: "Poppins", sans-serif;
+  --second-family: "FuturaBookC", sans-serif;
+  --third-family: "FuturaFuturisC", sans-serif;
+  --font3: "FuturaDemiC", sans-serif;
+  --font4: "FuturaLightC", sans-serif;
+  --font5: "Proxima Nova", sans-serif;
+
+  --white: #fff;
+  --black: #000929;
+  --title: #111;
+  --text: #969af7;
+  --gray: #555;
+  --gray-2: #333;
+  --accent: #07086c;
+  --accent-ligth: #969af7;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --container-padding: 100rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 80rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-padding: 25rem;
+  }
+}

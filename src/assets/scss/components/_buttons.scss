@@ -1,0 +1,14 @@
+@use "../utils/mixins";
+
+.btn {
+  @include mixins.button-base(
+    #ffa500,
+    linear-gradient(180deg, #6a32b4 0%, #552693 100%),
+    var(--white)
+  );
+
+  @include mixins.breakpoint(medium) {
+    font-size: 16rem;
+    padding: 14rem;
+  }
+}

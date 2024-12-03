@@ -1,0 +1,77 @@
+@use "../utils/mixins";
+
+.menu {
+  display: flex;
+  gap: 20rem;
+  flex-direction: column;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--accent);
+
+  top: 0;
+  right: -150%;
+
+  width: 70%;
+  height: 100%;
+  position: fixed;
+
+  transition: all 0.3s ease-in-out;
+
+  z-index: 5;
+
+  @include mixins.breakpoint(medium) {
+    width: 100%;
+  }
+
+  &.active {
+    right: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: block;
+
+    position: relative;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+    padding: 20rem 60rem;
+    font-weight: 400;
+    font-size: 30rem;
+    width: 100%;
+    line-height: 1.2;
+    color: var(--white);
+
+    &-close {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      border: none;
+      padding: 40rem 60rem;
+
+      &__img {
+        height: 30rem;
+        width: 30rem;
+      }
+    }
+    &.active {
+      text-decoration: underline;
+    }
+
+    &__logo {
+      margin-top: auto;
+    }
+  }
+
+  .header__menu.open {
+    display: flex;
+  }
+}
