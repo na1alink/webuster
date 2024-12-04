@@ -9,7 +9,7 @@
   overflow-x: hidden;
   background: var(--accent);
 
-  top: 0;
+  top: 100rem;
   right: -150%;
 
   width: 70%;
@@ -22,6 +22,7 @@
 
   @include mixins.breakpoint(medium) {
     width: 100%;
+    top: 60rem;
   }
 
   &.active {
@@ -50,12 +51,21 @@
     line-height: 1.2;
     color: var(--white);
 
+    @include mixins.breakpoint(medium) {
+      font-size: 20rem;
+      padding: 15rem 40rem;
+    }
+
     &-close {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       border: none;
-      padding: 40rem 60rem;
+      padding: 40rem 80rem;
+
+      @include mixins.breakpoint(medium) {
+        padding: 20rem 25rem;
+      }
 
       &__img {
         height: 30rem;

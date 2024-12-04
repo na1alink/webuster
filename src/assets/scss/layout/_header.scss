@@ -11,9 +11,11 @@
     position: fixed;
     background: var(--accent);
     padding: 40rem 0;
+    height: 100rem;
   }
   @include mixins.breakpoint(medium) {
     padding: 20rem 0;
+    height: 60rem;
   }
 
   &__container {

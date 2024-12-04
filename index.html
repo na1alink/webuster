@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./src/js/swiper-bundle.min.css" />
+    <title>Semitex</title>
   </head>
   <body>
     <header class="header">
@@ -56,16 +57,6 @@
     <div class="header__menu menu">
       <nav class="menu__nav">
         <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link-close">
-              <img
-                src="./src/assets/images/close.svg"
-                alt="close-btn"
-                class="menu__link-close__img"
-              />
-            </a>
-          </li>
-
           <li class="menu__item">
             <a href="#" class="menu__link">Каталог</a>
           </li>
@@ -165,11 +156,174 @@
         </div>
       </section>
 
+      <section class="advantages section-offset">
+        <div class="container advantages__container">
+          <h2 class="section-title advantages__title">
+            Почему с&nbsp;нами выгодно
+          </h2>
+
+          <p class="advantages__descr">
+            С&nbsp;1996 года мы&nbsp;занимаемся оптовыми поставками электронных
+            компонентов от&nbsp;ведущих производителей из&nbsp;Европы
+            и&nbsp;Азии для Российских потребителей.
+          </p>
+
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <div class="advantages__item-img">
+                <img
+                  src="./src/assets/images/advantages/high-quality-products.svg"
+                  alt="Качественная продукция"
+                />
+              </div>
+              <div class="advantages__item-text">
+                <h3 class="advantages__item-title">Качественная продукция</h3>
+                <p class="advantages__item-descr">
+                  Все наши товары сертифицированы и&nbsp;имеют сопроводительную
+                  документацию.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-img">
+                <img
+                  src="./src/assets/images/advantages/individual-approach.svg"
+                  alt="Индивидуальный подход"
+                />
+              </div>
+              <div class="advantages__item-text">
+                <h3 class="advantages__item-title">Индивидуальный подход</h3>
+                <p class="advantages__item-descr">
+                  Возможность изготовления компонентов специально для вас
+                  на&nbsp;заводах-изготовителя.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-img">
+                <img
+                  src="./src/assets/images/advantages/free-shipping.svg"
+                  alt="Бесплатная доставка"
+                />
+              </div>
+              <div class="advantages__item-text">
+                <h3 class="advantages__item-title">Бесплатная доставка</h3>
+                <p class="advantages__item-descr">
+                  При наличии товара на&nbsp;складе и&nbsp;заказе
+                  от&nbsp;10&nbsp;000&nbsp;рублей, доставим бесплатно
+                  по&nbsp;Москве и&nbsp;СПБ в&nbsp;течение 2х&nbsp;часов.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-img">
+                <img
+                  src="./src/assets/images/advantages/select-analogues.svg"
+                  alt="Подбираем аналоги"
+                />
+              </div>
+              <div class="advantages__item-text">
+                <h3 class="advantages__item-title">Подбираем аналоги</h3>
+                <p class="advantages__item-descr">
+                  Поможем подобрать аналоги популярных европейских брендов
+                  в&nbsp;условиях санкций.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-img">
+                <img
+                  src="./src/assets/images/advantages/reserve-stock-components.svg"
+                  alt="Резервный запас компонентов"
+                />
+              </div>
+              <div class="advantages__item-text">
+                <h3 class="advantages__item-title">
+                  Резервный запас компонентов
+                </h3>
+                <p class="advantages__item-descr">
+                  Хранение товара на&nbsp;наших складах для постоянных клиентов.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-img">
+                <img
+                  src="./src/assets/images/advantages/fexible-payment-system.svg"
+                  alt="Гибкая система оплаты"
+                />
+              </div>
+              <div class="advantages__item-text">
+                <h3 class="advantages__item-title">Гибкая система оплаты</h3>
+                <p class="advantages__item-descr">
+                  Отсрочка платежей для постоянных клиентов.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-offset manufacturers">
+        <div class="container manufacturers__container">
+          <h2 class="section-title manufacturers__title">Наши производители</h2>
+
+          <div class="swiper manufacturers__swiper">
+            <div class="swiper-wrapper manufacturers__swiper-wrapper">
+              <div class="swiper-slide manufacturers__slide">
+                <img
+                  src="./src/assets/images/manufacturers/aier.webp"
+                  alt="aier"
+                />
+              </div>
+              <div class="swiper-slide manufacturers__slide">
+                <img
+                  src="./src/assets/images/manufacturers/foryard.webp"
+                  alt="foryard"
+                />
+              </div>
+              <div class="swiper-slide manufacturers__slide">
+                <img
+                  src="./src/assets/images/manufacturers/fujicon.webp"
+                  alt="fujicon"
+                />
+              </div>
+              <div class="swiper-slide manufacturers__slide">
+                <img
+                  src="./src/assets/images/manufacturers/glass.webp"
+                  alt="glass"
+                />
+              </div>
+              <div class="swiper-slide manufacturers__slide">
+                <img
+                  src="./src/assets/images/manufacturers/marquis.webp"
+                  alt="marquis"
+                />
+              </div>
+              <div class="swiper-slide manufacturers__slide">
+                <img
+                  src="./src/assets/images/manufacturers/fujicon.webp"
+                  alt="fujicon"
+                />
+              </div>
+            </div>
+            <div class="swiper-button-prev manufacturers__swiper-prev"></div>
+            <div class="swiper-button-next manufacturers__swiper-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-offset scheme">
+        <div class="container scheme__container">
+          <h2 class="section-title scheme__title">Схема работы</h2>
+        </div>
+      </section>
+
       <div class="menu-overlay" id="menu-overlay"></div>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/src/js/swiper-bundle.min.js"></script>
     <script src="/src/js/jquery.inputmask.min.js"></script>
     <script type="module" src="/src/js/main.js"></script>
   </body>

@@ -37,13 +37,40 @@ document.querySelector(".menu-overlay").addEventListener("click", function (e) {
   }
 });
 
-document
-  .querySelector(".menu__link-close__img")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    closeMenu();
-  });
+// document
+//   .querySelector(".menu__link-close__img")
+//   .addEventListener("click", function (e) {
+//     e.preventDefault();
+//     closeMenu();
+//   });
 
 $(document).ready(function () {
   $(".phonemask").inputmask({ mask: "+7 (9 9 9) 9 9 9 9 9-9 9" });
+});
+
+const swiper = new Swiper(".manufacturers__swiper", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+
+  loop: true,
+  navigation: {
+    nextEl: ".manufacturers__swiper-next",
+    prevEl: ".manufacturers__swiper-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
 });

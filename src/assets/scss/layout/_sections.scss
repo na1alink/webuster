@@ -1,11 +1,26 @@
 @use "../utils/mixins";
 
 .section-offset {
-  padding-top: 100rem;
-  padding-bottom: 100rem;
+  padding-top: 85rem;
+  padding-bottom: 128rem;
 
   @include mixins.breakpoint(medium) {
-    padding-top: 48rem;
-    padding-bottom: 48rem;
+    padding-top: 40rem;
+    padding-bottom: 60rem;
+  }
+}
+
+.section-title {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 45rem;
+
+  // line-height: 45px;
+  line-height: 0.998;
+  text-align: center;
+  color: var(--white);
+
+  @include mixins.breakpoint(medium) {
+    font-size: 32rem;
   }
 }

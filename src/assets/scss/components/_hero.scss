@@ -279,6 +279,13 @@
           font-size: 18rem;
         }
       }
+
+      &:hover,
+      &:active,
+      &:focus-visible {
+        box-shadow: inset 1px 1px 3px 0 #6a32b4;
+        outline: none;
+      }
     }
     &-btn {
       margin-bottom: 18rem;

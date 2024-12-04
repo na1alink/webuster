@@ -69,8 +69,10 @@
   transition: background 0.3s ease, color 0.3s ease;
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus-visible {
     background: $hover-background;
     color: $hover-color;
+    outline: none;
   }
 }
