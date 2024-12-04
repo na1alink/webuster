@@ -4,5 +4,6 @@ export default defineConfig({
   base: "webuster",
   build: {
     outDir: "dist",
+    assetsDir: "assets",
   },
 });

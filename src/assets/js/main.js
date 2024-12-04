@@ -1,4 +1,10 @@
-import "./../scss/main.scss";
+import "../scss/main.scss";
+// import $ from "jquery";
+// import "jquery-inputmask";
+
+import Swiper from "swiper";
+import Inputmask from "inputmask";
+import "swiper/swiper-bundle.css";
 
 function closeMenu() {
   const burger = document.querySelector(".burger");
@@ -37,9 +43,8 @@ document.querySelector(".menu-overlay").addEventListener("click", function (e) {
   }
 });
 
-$(document).ready(function () {
-  $(".phonemask").inputmask({ mask: "+7 (9 9 9) 9 9 9 9 9-9 9" });
-});
+const im = new Inputmask({ mask: "+7 (9 9 9) 9 9 9 9 9-9 9" });
+im.mask(document.querySelectorAll(".phonemask"));
 
 const swiper = new Swiper(".manufacturers__swiper", {
   slidesPerView: 5,

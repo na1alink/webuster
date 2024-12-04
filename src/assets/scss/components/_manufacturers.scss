@@ -43,22 +43,37 @@
 
   &__swiper {
     // width: 100%;
-    margin: 0 112rem;
+    // padding: 0 112rem !important;
+    // box-sizing: border-box;
 
-    @include mixins.breakpoint(large) {
-      margin: 0 50rem;
-    }
-    @include mixins.breakpoint(medium) {
-      margin: 0 25rem;
-    }
     &-wrapper {
+      // margin: 0 112rem;
+      // @include mixins.breakpoint(large) {
+      //   margin: 0 50rem;
+      // }
+      // @include mixins.breakpoint(medium) {
+      //   margin: 0 25rem;
+      // }
     }
 
     &-prev,
     &-next {
-      &::after {
-        display: none;
-      }
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 41rem;
+      height: 41rem;
+      background-color: #111;
+      border-radius: 50%;
+      z-index: 10000;
+    }
+
+    &-prev {
+      left: -110rem;
+    }
+
+    &-next {
+      right: -110rem;
     }
   }
 
@@ -67,11 +82,11 @@
     background: #fff;
     border-radius: 10rem;
 
-    height: 174rem;
+    height: 174rem !important;
 
     overflow: hidden;
 
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     padding: 30rem;
@@ -93,17 +108,25 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 41rem;
-  height: 41rem;
+  width: 41rem !important;
+  height: 41rem !important;
   background-color: #111;
   border-radius: 50%;
   z-index: 10000;
 }
 
 .swiper-button-prev {
-  left: -110rem;
+  left: -110rem !important;
+
+  @include mixins.breakpoint(medium) {
+    left: -60rem !important;
+  }
 }
 
 .swiper-button-next {
-  right: -110rem;
+  right: -110rem !important;
+
+  @include mixins.breakpoint(medium) {
+    right: -60rem !important;
+  }
 }
