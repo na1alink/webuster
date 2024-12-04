@@ -1,4 +1,4 @@
-import "../assets/scss/main.scss";
+import "./../scss/main.scss";
 
 function closeMenu() {
   const burger = document.querySelector(".burger");
@@ -36,13 +36,6 @@ document.querySelector(".menu-overlay").addEventListener("click", function (e) {
     closeMenu();
   }
 });
-
-// document
-//   .querySelector(".menu__link-close__img")
-//   .addEventListener("click", function (e) {
-//     e.preventDefault();
-//     closeMenu();
-//   });
 
 $(document).ready(function () {
   $(".phonemask").inputmask({ mask: "+7 (9 9 9) 9 9 9 9 9-9 9" });
