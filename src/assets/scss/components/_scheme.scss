@@ -1,2 +1,156 @@
+@use "../utils/mixins";
+
 .scheme {
+  margin-top: -63rem;
+  padding-top: 132rem;
+  background-image: url("../images/sheme/bg-shema.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-bottom: 153rem;
+
+  @include mixins.breakpoint(medium) {
+    padding-top: 82rem;
+  }
+  &__title {
+    color: #111;
+
+    margin-bottom: 24rem;
+  }
+
+  &__descr {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 22rem;
+    line-height: 1;
+    text-align: center;
+    color: #333;
+    margin-bottom: 48rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30rem 20rem;
+
+    margin-bottom: 50rem;
+
+    @include mixins.breakpoint(large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mixins.breakpoint(medium) {
+      grid-template-columns: 1fr;
+      gap: 20rem;
+      margin-bottom: 30rem;
+    }
+  }
+
+  &__item {
+    height: 268rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: linear-gradient(to right, #041080 8.5%, #0926c0 100%);
+
+    border-radius: 20rem;
+    padding: 38rem 20rem 38rem 38rem;
+    display: flex;
+    gap: 19rem;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 201rem;
+      right: -138rem;
+
+      background: #fff;
+      transform: rotate(-45deg);
+      opacity: 0.06;
+
+      border-radius: 30rem;
+      width: 441rem;
+      height: 441rem;
+      z-index: 0;
+    }
+
+    @include mixins.breakpoint(medium) {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 24rem;
+    }
+
+    &-step {
+      font-family: var(--third-family);
+      font-weight: 700;
+      font-size: 36rem;
+      text-align: center;
+      color: #969af7;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 10rem;
+    }
+    &-title {
+      font-family: var(--third-family);
+
+      font-weight: 700;
+      font-size: 18rem;
+
+      line-height: 1.38889;
+      color: var(--white);
+      height: 54rem;
+
+      @include mixins.breakpoint(medium) {
+        height: auto;
+      }
+    }
+
+    &-descr {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 18rem;
+
+      // line-height: 25px;
+      line-height: 1.38889;
+      color: #e3e3e3;
+    }
+
+    &-3 {
+      @include mixins.breakpoint(large) {
+        order: 4;
+      }
+    }
+    &-4 {
+      order: 6;
+      @include mixins.breakpoint(large) {
+        order: 3;
+      }
+    }
+    &-5 {
+      order: 5;
+      @include mixins.breakpoint(large) {
+        order: 6;
+      }
+    }
+    &-6 {
+      order: 4;
+      @include mixins.breakpoint(large) {
+        order: 6;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+
+    &-btn {
+      max-width: 300rem;
+      @include mixins.breakpoint(medium) {
+        max-width: 100%;
+      }
+    }
+  }
 }

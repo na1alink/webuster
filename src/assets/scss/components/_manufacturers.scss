@@ -42,38 +42,37 @@
   }
 
   &__swiper {
-    // width: 100%;
-    // padding: 0 112rem !important;
-    // box-sizing: border-box;
-
-    &-wrapper {
-      // margin: 0 112rem;
-      // @include mixins.breakpoint(large) {
-      //   margin: 0 50rem;
-      // }
-      // @include mixins.breakpoint(medium) {
-      //   margin: 0 25rem;
-      // }
-    }
+    width: 100%;
 
     &-prev,
     &-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
       width: 41rem;
       height: 41rem;
-      background-color: #111;
+      background-color: #8587d2;
       border-radius: 50%;
       z-index: 10000;
+
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        background-image: url("../images/manufacturers/arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        width: 7rem;
+        height: 13rem;
+      }
     }
 
-    &-prev {
-      left: -110rem;
-    }
-
-    &-next {
-      right: -110rem;
+    &-next::after {
+      transform: rotate(180deg);
     }
   }
 
@@ -101,32 +100,48 @@
       object-fit: contain;
     }
   }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    &-descr {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 20rem;
+
+      line-height: 1.55;
+      color: var(--white);
+      max-width: 1280rem;
+
+      @include mixins.breakpoint(large) {
+        max-width: 935rem;
+      }
+      @include mixins.breakpoint(medium) {
+        font-size: 18rem;
+        line-height: 1.2;
+      }
+    }
+  }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 41rem !important;
-  height: 41rem !important;
-  background-color: #111;
-  border-radius: 50%;
-  z-index: 10000;
+  display: block;
+  visibility: visible;
 }
 
-.swiper-button-prev {
-  left: -110rem !important;
+.swiper-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 70rem;
 
-  @include mixins.breakpoint(medium) {
-    left: -60rem !important;
+  margin-bottom: 40rem;
+
+  @include mixins.breakpoint(large) {
+    gap: 40rem;
   }
-}
-
-.swiper-button-next {
-  right: -110rem !important;
-
   @include mixins.breakpoint(medium) {
-    right: -60rem !important;
+    gap: 20rem;
   }
 }

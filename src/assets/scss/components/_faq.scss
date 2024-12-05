@@ -1,0 +1,44 @@
+@use "../utils/mixins";
+.faq {
+  margin-top: -60rem;
+  padding-top: 112rem;
+
+  position: relative;
+  height: 100%;
+
+  width: 100%;
+
+  background-image: url("../images/faq-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     right: 0;
+  //     z-index: 0;
+  //     background-image: url("../images/faq-bg1.svg");
+  //     background-repeat: no-repeat;
+  //     background-size: contain;
+
+  //     width: 100%;
+
+  //     height: 100%;
+  //   }
+  @include mixins.breakpoint(medium) {
+    margin-top: -90rem;
+    padding-top: 74rem;
+  }
+
+  &__container {
+    z-index: 5;
+  }
+
+  &__title {
+    margin-bottom: 56rem;
+    @include mixins.breakpoint(medium) {
+      margin-bottom: 30rem;
+    }
+  }
+}

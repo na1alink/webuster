@@ -267,7 +267,9 @@
       <section class="section-offset manufacturers">
         <div class="container manufacturers__container">
           <h2 class="section-title manufacturers__title">Наши производители</h2>
-          <div class="swiper-wrapper">
+
+          <div class="swiper-container">
+            <div class="manufacturers__swiper-prev"></div>
             <div class="swiper manufacturers__swiper">
               <div class="swiper-wrapper manufacturers__swiper-wrapper">
                 <div class="swiper-slide manufacturers__slide">
@@ -308,8 +310,20 @@
                 </div>
               </div>
             </div>
-            <div class="manufacturers__swiper-prev"></div>
             <div class="manufacturers__swiper-next"></div>
+          </div>
+
+          <div class="manufacturers__bottom">
+            <p class="manufacturers__bottom-descr">
+              Lorem ipsum dolor sit amet consectetur. Non eget blandit
+              in&nbsp;euismod felis id&nbsp;quisque nunc. Non orci lacus elit
+              mauris velit gravida imperdiet&nbsp;id. Ipsum pulvinar
+              ac&nbsp;ut&nbsp;sociis. Sed magna gravida consequat
+              et&nbsp;euismod aenean quis mauris. Ut&nbsp;etiam egestas ultrices
+              faucibus ultrices nisl enim consequat faucibus. Nibh id&nbsp;leo
+              ullamcorper eleifend. Id&nbsp;at&nbsp;commodo interdum
+              et&nbsp;leo.
+            </p>
           </div>
         </div>
       </section>
@@ -317,11 +331,325 @@
       <section class="section-offset scheme">
         <div class="container scheme__container">
           <h2 class="section-title scheme__title">Схема работы</h2>
+          <p class="scheme__descr">
+            Lorem ipsum dolor sit amet consectetur. Augue velit in&nbsp;enim
+            sagittis imperdiet sit mauris. Vitae sit in&nbsp;fusce massa amet.
+          </p>
+
+          <ul class="scheme__list">
+            <li class="scheme__item scheme__item-1">
+              <span class="scheme__item-step">01</span>
+              <div class="scheme__item-text">
+                <h3 class="scheme__item-title">ВЫ ОСТАВЛЯЕТЕ ЗАЯВКУ</h3>
+                <p class="scheme__item-descr">
+                  Отправить запрос вы можете любым удобным для вас способом:
+                  например, через форму на сайте. Также вы можете связаться с
+                  нами напрямую.
+                </p>
+              </div>
+            </li>
+            <li class="scheme__item scheme__item-2">
+              <span class="scheme__item-step">02</span>
+              <div class="scheme__item-text">
+                <h3 class="scheme__item-title">МЫ ПРОВЕРЯЕМ НАЛИЧИЕ ПОЗИЦИЙ</h3>
+                <p class="scheme__item-descr">
+                  Проверяем наличие на складе, а также актуальность производства
+                  (возможна замена, если необходимо.) Если требуется замена -
+                  подбираем аналоги и привозим на заказ.
+                </p>
+              </div>
+            </li>
+            <li class="scheme__item scheme__item-3">
+              <span class="scheme__item-step">03</span>
+              <div class="scheme__item-text">
+                <h3 class="scheme__item-title">
+                  ФОРМИРУЕМ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ
+                </h3>
+                <p class="scheme__item-descr">
+                  На данном этапе мы с вами согласуем ценовое предложение,
+                  обговариваем сроки поставки и условия оплаты.
+                </p>
+              </div>
+            </li>
+            <li class="scheme__item scheme__item-4">
+              <span class="scheme__item-step">04</span>
+              <div class="scheme__item-text">
+                <h3 class="scheme__item-title">ПРОВОДИМ ОПЛАТУ</h3>
+                <p class="scheme__item-descr">
+                  Далее, после получения авансового платежа, мы размещаем заказ.
+                </p>
+              </div>
+            </li>
+            <li class="scheme__item scheme__item-5">
+              <span class="scheme__item-step">05</span>
+              <div class="scheme__item-text">
+                <h3 class="scheme__item-title">МЫ ВЫПОЛНЯЕМ ЗАКАЗ</h3>
+                <p class="scheme__item-descr">
+                  На данном этапе мы с вами согласуем ценовое предложение,
+                  обговариваем сроки поставки и условия оплаты.
+                </p>
+              </div>
+            </li>
+            <li class="scheme__item scheme__item-6">
+              <span class="scheme__item-step">06</span>
+              <div class="scheme__item-text">
+                <h3 class="scheme__item-title">ВЫ ПОЛУЧАЕТЕ ТОВАР</h3>
+                <p class="scheme__item-descr">
+                  Поставляем вам товар в надлежащей упаковке в сопровождении
+                  оригиналов всех необходимых документов либо вы забираете его
+                  самовывозом.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="scheme__bottom">
+            <button class="btn scheme__bottom-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-offset faq">
+        <div class="container faq__container">
+          <h2 class="section-title faq__title">
+            Ответы на самые популярные вопросы в сфере
+          </h2>
+
+          <div class="faq__accordion accordion">
+            <div class="accordion__wrap">
+              <details class="accordion__details" name="faq">
+                <summary class="accordion__summary">
+                  <span
+                    class="accordion__title"
+                    role="term"
+                    aria-details="faq-1"
+                  >
+                    Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                  </span>
+                </summary>
+              </details>
+
+              <div class="accordion__content" id="faq-1" role="definition">
+                <div class="accordion__content-body">
+                  <p>
+                    Like the phrase “stem cell” itself, “stem cell therapy” is
+                    often used to describe a variety of different medical
+                    therapies that utilize stem cells in some form to treat a
+                    patient. Sometimes the term is used incorrectly to refer to
+                    platelet rich plasma (PRP) injections. The term is also used
+                    to refer to stem cell transplants, also known as bone marrow
+                    transplants.
+                  </p>
+                  <p>
+                    Most commonly “stem cell therapy” is used to describe a
+                    procedure where the patient’s adult stem cells and other
+                    potentially regenerative cells are harvested from a tissue
+                    sample of either fat or bone marrow taken from the patient.
+                    These concentrated regenerative cells are then used to treat
+                    specific injuries typically by injecting them into the
+                    afflicted area. It should be said that this type of stem
+                    cell therapy is currently not FDA approved and clinics
+                    performing it illegally in the US or in other countries
+                    perform various versions of the procedure to treat illnesses
+                    and injuries with little to no clinical evidence.
+                  </p>
+                  <p>
+                    At InGeneron we use the term “regenerative cell therapy”
+                    since there are many different cell types and regenerative
+                    properties collected and used by our therapy along with
+                    adult stem cells. Importantly we do not treat patients
+                    outside of our approved clinical trials and we are dedicated
+                    to securing FDA approval through rigorous clinical testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__wrap">
+              <details class="accordion__details" name="faq">
+                <summary class="accordion__summary">
+                  <span
+                    class="accordion__title"
+                    role="term"
+                    aria-details="faq-1"
+                  >
+                    Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                  </span>
+                </summary>
+              </details>
+
+              <div class="accordion__content" id="faq-1" role="definition">
+                <div class="accordion__content-body">
+                  <p>
+                    Like the phrase “stem cell” itself, “stem cell therapy” is
+                    often used to describe a variety of different medical
+                    therapies that utilize stem cells in some form to treat a
+                    patient. Sometimes the term is used incorrectly to refer to
+                    platelet rich plasma (PRP) injections. The term is also used
+                    to refer to stem cell transplants, also known as bone marrow
+                    transplants.
+                  </p>
+                  <p>
+                    Most commonly “stem cell therapy” is used to describe a
+                    procedure where the patient’s adult stem cells and other
+                    potentially regenerative cells are harvested from a tissue
+                    sample of either fat or bone marrow taken from the patient.
+                    These concentrated regenerative cells are then used to treat
+                    specific injuries typically by injecting them into the
+                    afflicted area. It should be said that this type of stem
+                    cell therapy is currently not FDA approved and clinics
+                    performing it illegally in the US or in other countries
+                    perform various versions of the procedure to treat illnesses
+                    and injuries with little to no clinical evidence.
+                  </p>
+                  <p>
+                    At InGeneron we use the term “regenerative cell therapy”
+                    since there are many different cell types and regenerative
+                    properties collected and used by our therapy along with
+                    adult stem cells. Importantly we do not treat patients
+                    outside of our approved clinical trials and we are dedicated
+                    to securing FDA approval through rigorous clinical testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__wrap">
+              <details class="accordion__details" name="faq">
+                <summary class="accordion__summary">
+                  <span
+                    class="accordion__title"
+                    role="term"
+                    aria-details="faq-1"
+                  >
+                    Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                  </span>
+                </summary>
+              </details>
+
+              <div class="accordion__content" id="faq-1" role="definition">
+                <div class="accordion__content-body">
+                  <p>
+                    Like the phrase “stem cell” itself, “stem cell therapy” is
+                    often used to describe a variety of different medical
+                    therapies that utilize stem cells in some form to treat a
+                    patient. Sometimes the term is used incorrectly to refer to
+                    platelet rich plasma (PRP) injections. The term is also used
+                    to refer to stem cell transplants, also known as bone marrow
+                    transplants.
+                  </p>
+                  <p>
+                    Most commonly “stem cell therapy” is used to describe a
+                    procedure where the patient’s adult stem cells and other
+                    potentially regenerative cells are harvested from a tissue
+                    sample of either fat or bone marrow taken from the patient.
+                    These concentrated regenerative cells are then used to treat
+                    specific injuries typically by injecting them into the
+                    afflicted area. It should be said that this type of stem
+                    cell therapy is currently not FDA approved and clinics
+                    performing it illegally in the US or in other countries
+                    perform various versions of the procedure to treat illnesses
+                    and injuries with little to no clinical evidence.
+                  </p>
+                  <p>
+                    At InGeneron we use the term “regenerative cell therapy”
+                    since there are many different cell types and regenerative
+                    properties collected and used by our therapy along with
+                    adult stem cells. Importantly we do not treat patients
+                    outside of our approved clinical trials and we are dedicated
+                    to securing FDA approval through rigorous clinical testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__wrap">
+              <details class="accordion__details" name="faq">
+                <summary class="accordion__summary">
+                  <span
+                    class="accordion__title"
+                    role="term"
+                    aria-details="faq-1"
+                  >
+                    Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                  </span>
+                </summary>
+              </details>
+
+              <div class="accordion__content" id="faq-1" role="definition">
+                <div class="accordion__content-body">
+                  <p>
+                    Like the phrase “stem cell” itself, “stem cell therapy” is
+                    often used to describe a variety of different medical
+                    therapies that utilize stem cells in some form to treat a
+                    patient. Sometimes the term is used incorrectly to refer to
+                    platelet rich plasma (PRP) injections. The term is also used
+                    to refer to stem cell transplants, also known as bone marrow
+                    transplants.
+                  </p>
+                  <p>
+                    Most commonly “stem cell therapy” is used to describe a
+                    procedure where the patient’s adult stem cells and other
+                    potentially regenerative cells are harvested from a tissue
+                    sample of either fat or bone marrow taken from the patient.
+                    These concentrated regenerative cells are then used to treat
+                    specific injuries typically by injecting them into the
+                    afflicted area. It should be said that this type of stem
+                    cell therapy is currently not FDA approved and clinics
+                    performing it illegally in the US or in other countries
+                    perform various versions of the procedure to treat illnesses
+                    and injuries with little to no clinical evidence.
+                  </p>
+                  <p>
+                    At InGeneron we use the term “regenerative cell therapy”
+                    since there are many different cell types and regenerative
+                    properties collected and used by our therapy along with
+                    adult stem cells. Importantly we do not treat patients
+                    outside of our approved clinical trials and we are dedicated
+                    to securing FDA approval through rigorous clinical testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <div class="menu-overlay" id="menu-overlay"></div>
     </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <a href="/" class="footer__logo">
+          <img src="./src/assets/images/logo.svg" alt="Logo" />
+        </a>
+
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Каталог</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Производители</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Для кого мы работаем</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Сертификаты </a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#"> О нас</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#"> FAQ</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#"> Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="btn footer__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+      </div>
+    </footer>
 
     <script type="module" src="/src/assets/js/main.js"></script>
   </body>

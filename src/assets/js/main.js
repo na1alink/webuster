@@ -46,29 +46,32 @@ document.querySelector(".menu-overlay").addEventListener("click", function (e) {
 const im = new Inputmask({ mask: "+7 (9 9 9) 9 9 9 9 9-9 9" });
 im.mask(document.querySelectorAll(".phonemask"));
 
-const swiper = new Swiper(".manufacturers__swiper", {
-  slidesPerView: 5,
-  spaceBetween: 20,
-
-  loop: true,
-  navigation: {
-    nextEl: ".manufacturers__swiper-next",
-    prevEl: ".manufacturers__swiper-prev",
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 10,
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".manufacturers__swiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".manufacturers__swiper-prev",
+      prevEl: ".manufacturers__swiper-prev",
     },
-
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
     },
-
-    1200: {
-      slidesPerView: 5,
-      spaceBetween: 20,
-    },
-  },
+  });
 });

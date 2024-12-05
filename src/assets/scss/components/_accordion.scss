@@ -1,0 +1,82 @@
+@use "../utils/mixins";
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  &__wrap {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  &__details {
+    list-style-type: none;
+  }
+
+  &__summary {
+    list-style-type: none;
+
+    box-shadow: 0 0 50px -10px rgba(22, 126, 194, 0.2);
+    background: linear-gradient(180deg, #fff 0%, #bdc0ff 100%);
+    border-radius: 10px;
+
+    padding: 28rem 55rem;
+    cursor: pointer;
+
+    @include mixins.breakpoint(medium) {
+      padding: 15rem;
+    }
+  }
+
+  &__title {
+    font-family: var(--font3);
+    font-weight: 600;
+    font-size: 24rem;
+
+    // line-height: 28px;
+    line-height: 1.16667;
+    color: #333;
+
+    @include mixins.breakpoint(medium) {
+      font-size: 18rem;
+      line-height: normal;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition-duration: 0.3s;
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 26rem;
+      overflow: hidden;
+      @include mixins.breakpoint(medium) {
+        gap: 16rem;
+      }
+
+      p {
+        font-family: var(--second-family);
+        font-weight: 400;
+
+        // line-height: 27px;
+        line-height: 1.35;
+        color: #333;
+
+        @include mixins.breakpoint(medium) {
+          font-size: 16rem;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+.accordion__details[open] + .accordion__content {
+  grid-template-rows: 1fr;
+  padding: 38rem 55rem;
+
+  @include mixins.breakpoint(medium) {
+    padding: 20rem 15rem;
+  }
+}
