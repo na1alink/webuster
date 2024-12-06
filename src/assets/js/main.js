@@ -1,10 +1,42 @@
 import "../scss/main.scss";
-// import $ from "jquery";
-// import "jquery-inputmask";
 
-import Swiper from "swiper";
 import Inputmask from "inputmask";
-import "swiper/swiper-bundle.css";
+import "owl.carousel/dist/assets/owl.carousel.min.css";
+import "owl.carousel/dist/assets/owl.theme.default.min.css";
+import $ from "jquery";
+
+import "owl.carousel";
+
+$(document).ready(function () {
+  var owl = $(".manufacturers__carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    responsive: {
+      320: {
+        items: 1,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 4,
+      },
+      1200: {
+        items: 5,
+      },
+    },
+  });
+
+  $(".manufacturers__carousel-prev").click(function () {
+    owl.trigger("prev.owl.carousel");
+  });
+
+  $(".manufacturers__carousel-next").click(function () {
+    owl.trigger("next.owl.carousel");
+  });
+});
 
 function closeMenu() {
   const burger = document.querySelector(".burger");
@@ -45,33 +77,3 @@ document.querySelector(".menu-overlay").addEventListener("click", function (e) {
 
 const im = new Inputmask({ mask: "+7 (9 9 9) 9 9 9 9 9-9 9" });
 im.mask(document.querySelectorAll(".phonemask"));
-
-document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper(".manufacturers__swiper", {
-    slidesPerView: 5,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: ".manufacturers__swiper-prev",
-      prevEl: ".manufacturers__swiper-prev",
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      992: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 5,
-        spaceBetween: 20,
-      },
-    },
-  });
-});

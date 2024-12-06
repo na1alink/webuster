@@ -41,8 +41,16 @@
     }
   }
 
-  &__swiper {
+  &__carousel {
     width: 100%;
+    max-width: 1280rem;
+
+    @include mixins.breakpoint(large) {
+      max-width: 940rem;
+    }
+    @include mixins.breakpoint(medium) {
+      max-width: 224rem;
+    }
 
     &-prev,
     &-next {
@@ -81,7 +89,7 @@
     background: #fff;
     border-radius: 10rem;
 
-    height: 174rem !important;
+    height: 174rem;
 
     overflow: hidden;
 
@@ -91,7 +99,7 @@
     padding: 30rem;
 
     @include mixins.breakpoint(medium) {
-      height: 150rem;
+      height: 130rem;
     }
 
     img {
@@ -131,6 +139,7 @@
 }
 
 .swiper-container {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;

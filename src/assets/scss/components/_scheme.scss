@@ -52,11 +52,12 @@
     background: linear-gradient(to right, #041080 8.5%, #0926c0 100%);
 
     border-radius: 20rem;
-    padding: 38rem 20rem 38rem 38rem;
+    padding: 38rem;
     display: flex;
     gap: 19rem;
     position: relative;
     overflow: hidden;
+
     &::after {
       content: "";
       position: absolute;
@@ -121,11 +122,18 @@
       @include mixins.breakpoint(large) {
         order: 4;
       }
+
+      @include mixins.breakpoint(medium) {
+        order: 3;
+      }
     }
     &-4 {
       order: 6;
       @include mixins.breakpoint(large) {
         order: 3;
+      }
+      @include mixins.breakpoint(medium) {
+        order: 4;
       }
     }
     &-5 {
