@@ -13,16 +13,20 @@
   right: -150%;
 
   width: 70%;
-  height: 100%;
+  height: calc(100vh - 100rem);
   position: fixed;
 
   transition: all 0.3s ease-in-out;
 
   z-index: 5;
 
+  padding-top: 40rem;
+
   @include mixins.breakpoint(medium) {
     width: 100%;
     top: 60rem;
+    height: calc(100vh - 60rem);
+    padding-top: 10rem;
   }
 
   &.active {
@@ -78,6 +82,21 @@
 
     &__logo {
       margin-top: auto;
+    }
+  }
+
+  &__bottom {
+    padding: 40rem 60rem;
+    margin-top: auto;
+    @include mixins.breakpoint(medium) {
+      padding: 15rem 40rem;
+    }
+
+    &-btn {
+      max-width: 300rem;
+      @include mixins.breakpoint(medium) {
+        max-width: 100%;
+      }
     }
   }
 

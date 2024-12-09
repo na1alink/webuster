@@ -1,0 +1,254 @@
+@use "../utils/mixins";
+.wrap-modals-all {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5rem);
+  z-index: 5;
+
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+
+  &.opened {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.modal {
+  max-width: 600rem;
+  width: 100%;
+  height: auto;
+  background-color: #fbfbfb;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  align-items: center;
+  padding: 60rem 90rem;
+  padding-top: 120rem;
+  border: none;
+  position: relative;
+
+  z-index: 10;
+
+  border-radius: 24rem;
+  background: var(--white);
+
+  /* Тень */
+  box-shadow: 0rem 0rem 10rem 0rem rgba(113, 113, 113, 0.2);
+
+  @include mixins.breakpoint(medium) {
+    padding: 20rem;
+
+    padding-top: 60rem;
+  }
+
+  &-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40rem;
+
+    @include mixins.breakpoint(large) {
+      gap: 30rem;
+    }
+
+    &__title {
+      color: var(--black);
+      font-family: var(--second-family);
+      font-size: 46rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%; /* 52.8px */
+      text-transform: uppercase;
+      @include mixins.breakpoint(medium) {
+        font-size: 30rem;
+      }
+    }
+
+    &__text {
+      margin: 0;
+
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 135%; /* 27rem */
+      max-width: 473rem;
+      margin-bottom: 40rem;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25rem;
+    width: 100%;
+    @include mixins.breakpoint(large) {
+      gap: 20rem;
+    }
+
+    &-wrap {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    &-label {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 22rem;
+
+      line-height: 1.28906;
+      color: #626366;
+      padding-left: 19rem;
+
+      @include mixins.breakpoint(medium) {
+        padding-left: 10rem;
+        font-size: 18rem;
+      }
+    }
+    &-input {
+      font-family: var(--second-family);
+
+      font-weight: 400;
+      font-size: 24rem;
+
+      line-height: 1.28906;
+      color: var(--title);
+
+      box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+      background: #f5f3ff;
+
+      border-radius: 10rem;
+      padding: 15rem;
+
+      @include mixins.breakpoint(medium) {
+        padding: 10rem;
+        font-size: 20rem;
+      }
+
+      &::placeholder {
+        color: #bcbfc4;
+
+        font-weight: 400;
+        font-size: 24rem;
+
+        line-height: 1.28906;
+
+        @include mixins.breakpoint(medium) {
+          font-size: 20rem;
+        }
+      }
+
+      &:hover,
+      &:active,
+      &:focus-visible {
+        box-shadow: inset 1px 1px 3px 0 #6a32b4;
+        outline: none;
+      }
+    }
+
+    &-btn {
+      margin-top: 18rem;
+    }
+  }
+}
+
+.modal-wrap {
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+  padding: 20rem;
+  position: absolute;
+  top: -150%;
+  right: -0;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: visible;
+  overflow-y: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &.opened {
+    top: 0;
+    transform: translateX(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 40rem;
+  right: 40rem;
+
+  svg {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  @include mixins.breakpoint(medium) {
+    top: 20rem;
+    right: 20rem;
+    svg {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+}
+
+// @media (max-width: 767px) {
+//   .modal {
+//     padding: 40rem;
+//     padding-top: 60rem;
+//     height: 476rem;
+
+//     &-content {
+//       gap: 20rem;
+//       &__title {
+//         font-size: 32rem;
+//       }
+//     }
+//     &__form {
+//       &-wrapper {
+//         grid-template-columns: auto;
+//         margin-bottom: 40rem;
+//       }
+
+//       &-input {
+//         font-size: 16rem;
+
+//         &::placeholder {
+//           font-size: 16rem;
+//         }
+//       }
+
+//       &-btn {
+//         font-size: 19rem;
+//         max-width: 100%;
+//       }
+
+//       &-agreement {
+//         font-size: 14rem;
+//       }
+//     }
+
+//     &__img {
+//       display: none;
+//     }
+
+//     &-close {
+//       width: 24rem;
+//       height: 24rem;
+//     }
+//   }
+// }

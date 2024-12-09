@@ -28,6 +28,12 @@ body {
   min-height: 100vh;
 }
 
+body:has(.modal-wrap.opened) {
+  max-height: 100vh;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
 .hidden-item {
   display: none !important;
 }

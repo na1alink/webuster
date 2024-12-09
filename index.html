@@ -80,6 +80,11 @@
           </li>
         </ul>
       </nav>
+      <div class="menu__bottom">
+        <button class="btn menu__bottom-btn" data-modal-id="openModal">
+          ОСТАВИТЬ ЗАЯВКУ
+        </button>
+      </div>
     </div>
 
     <main>
@@ -406,7 +411,9 @@
           </ul>
 
           <div class="scheme__bottom">
-            <button class="btn scheme__bottom-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+            <button class="btn scheme__bottom-btn" data-modal-id="openModal">
+              ОСТАВИТЬ ЗАЯВКУ
+            </button>
           </div>
         </div>
       </section>
@@ -675,6 +682,66 @@
         </div>
       </section>
 
+      <div class="wrap-modals-all">
+        <div class="modal-wrap" id="openModal">
+          <div class="modal">
+            <button class="modal-close btn-reset">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="29"
+                viewBox="0 0 28 29"
+                fill="none"
+              >
+                <path
+                  d="M11.8075 14.0643L0.403237 2.40365C0.275395 2.2729 0.173985 2.11768 0.104798 1.94685C0.0356104 1.77602 1.34703e-09 1.59293 0 1.40803C-1.34703e-09 1.22312 0.0356105 1.04003 0.104798 0.869198C0.173985 0.698368 0.275395 0.543148 0.403237 0.412401C0.531078 0.281654 0.682849 0.17794 0.849882 0.10718C1.01692 0.0364198 1.19594 -1.37765e-09 1.37674 0C1.55753 1.37765e-09 1.73656 0.0364198 1.90359 0.10718C2.07062 0.17794 2.2224 0.281654 2.35024 0.412401L13.7517 12.0758L25.1532 0.412401C25.4114 0.148345 25.7616 0 26.1267 0C26.4919 0 26.842 0.148345 27.1002 0.412401C27.3584 0.676457 27.5035 1.03459 27.5035 1.40803C27.5035 1.78146 27.3584 2.1396 27.1002 2.40365L15.696 14.0643L27.1002 25.7249C27.3584 25.989 27.5035 26.3471 27.5035 26.7205C27.5035 27.094 27.3584 27.4521 27.1002 27.7161C26.842 27.9802 26.4919 28.1285 26.1267 28.1285C25.7616 28.1285 25.4114 27.9802 25.1532 27.7161L13.7517 16.0527L2.35024 27.7161C2.09205 27.9802 1.74187 28.1285 1.37674 28.1285C1.0116 28.1285 0.661425 27.9802 0.403237 27.7161C0.145048 27.4521 0 27.094 0 26.7205C0 26.3471 0.145048 25.989 0.403237 25.7249L11.8075 14.0643Z"
+                  fill="#0C1B40"
+                />
+              </svg>
+            </button>
+
+            <div class="modal-content">
+              <h2 class="modal-content__title">Оставьте заявку</h2>
+
+              <form action="" class="modal__form">
+                <div class="modal__form-wrap">
+                  <label for="name" class="modal__form-label">Ваше имя*</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Петров Петр"
+                    class="modal__form-input"
+                    required
+                    aria-required="true"
+                  />
+                </div>
+
+                <div class="modal__form-wrap">
+                  <label for="phone" class="modal__form-label">
+                    Ваш номер*
+                  </label>
+
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="+7 (_ _ _) _ _ _-_ _-_ _"
+                    class="modal__form-input phonemask"
+                    required
+                    aria-required="true"
+                  />
+                </div>
+
+                <button type="submit" class="modal__form-btn btn">
+                  Оставить заявку
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="menu-overlay" id="menu-overlay"></div>
     </main>
 
@@ -710,19 +777,12 @@
           </ul>
         </nav>
 
-        <button class="btn footer__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+        <button class="btn footer__btn" data-modal-id="openModal">
+          ОСТАВИТЬ ЗАЯВКУ
+        </button>
       </div>
     </footer>
-    <!-- <link
-      rel="stylesheet"
-      href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css"
-    />
 
-    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script> -->
     <script type="module" src="/src/assets/js/main.js"></script>
   </body>
 </html>
